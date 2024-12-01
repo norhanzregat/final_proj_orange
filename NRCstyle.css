@@ -1,0 +1,659 @@
+/*This is an External CSS file*/
+
+
+/*Body style*/
+body
+{
+    margin: auto;
+    background-image: url(images/Background.png);
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+
+/* Navigation Bar */
+.navbar
+{
+    background-color: rgb(255, 255, 255);
+    position: fixed;                        /* Make the Nav Bar stay at the top or the bottom of the page even when the user scrolling*/
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    font-family: Calibri light;
+}
+.navbar a
+{
+    float: right;
+    display: block;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    text-decoration: none;                  /* To remove underline from the text */
+    font-size: 20px;
+    margin-top: 5px;
+}
+.navbar a:hover
+{
+    color: rgb(255, 121, 0);
+    transition: color 0.3s;                /* Smooth color transition */
+}
+
+/* For Program Name text as it's the first row in the navigation bar*/
+.navbar p:first-child                      
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    font-family: Calibri light;
+    font-size: 20px;
+    color: #FFD436;
+    font-weight: lighter;
+}
+/* For Program Name text as it's the first row in the navigation bar*/
+
+.navbar img                      
+{
+   
+    margin-left: 30px;
+    float:left;
+}
+
+/*AboutContact*/
+.AboutContact
+{
+    padding-bottom:10px;
+    padding-top:10px;
+    letter-spacing: 1px;
+    font-family: Calibri;
+    background-color: rgb(255, 121, 0);
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+/*AboutProgram8*/
+
+/* StudentInfo*/
+
+.Homegrid-container 
+{
+    display: grid;
+    /*background-color: #2196F3;*/
+    grid-template-rows:40px 300px;
+    /*column-gap: 10px;*/
+    /*grid-row-gap: 10px*/;   
+}
+
+.Homegrid-item 
+{
+    /*background-color: rgba(100, 255, 255, 0.8);*/
+}
+
+/*Hi Grid*/
+.itemA 
+{
+    padding-top: 10px;
+    padding-left: 350px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-size: 45px;
+    font-family: Calibri;
+    font-style: italic;   
+}
+
+/*Pic Grid*/
+.itemB 
+{
+    padding-top: 10px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    padding-bottom: 30px;
+}
+
+/*Brief Grid*/
+.itemC 
+{
+    padding-left: 370px;
+    display: flex;
+    justify-content: left;
+    align-items:flex-start;
+    grid-column: 1 / span 2;
+    grid-row:2;
+    font-size: 25px;
+    font-family: Calibri;
+}
+
+
+
+/*ProgramAssigments (list page)*/
+
+.ProgramAssigments
+{
+    text-align: center;
+    color: black;
+    width=100%;
+    height: auto;
+    z-index: 1;
+}
+ 
+.ProgramAssigmentsTitle
+{ 
+    padding: 10px;
+    padding-bottom: 35px;
+    height: 30px;
+    text-align: center;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size:18px;
+}
+
+.ProgramAssigmentsBlocks                              
+{
+    position: relative;
+    display: block;
+    margin-left: 70px;
+    margin-top: 40px;
+    border: 5px solid #ffffff;
+    float: left;
+    width: 400px;
+}
+.ProgramAssigmentsBlocks img                    /* To make the images size matches with the border size */
+{
+    width: 300px;
+    height:auto;
+}
+
+.ProgramAssigmentsBlocks:hover                  /* Hover is used to select elements when the mouse over an element */
+{
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.ProgramAssigmentsBlocks-1                       
+{
+    position: relative;
+    display: block;
+    margin-left: 550px;
+    margin-top: 40px;
+    border: 5px solid #ffffff;
+    float: left;
+    width: 400px;
+}
+.ProgramAssigmentsBlocks-1 img 
+{
+    width: 100%;
+    height:auto;
+}
+
+.ProgramAssigmentsBlocks-1:hover                /* Hover is used to select elements when the mouse over an element */
+{
+    border: 5px solid rgb(0, 0, 0);
+}
+
+
+
+/* Assigment(Task page)*/
+
+/* Assignment Header */
+.Assignmentsbackgroundimg                       /* to place header pic at the top of all asssignments pages */
+{
+    background-image:
+        url(images/ProgramAssignment/Innovation/Dummy.png);
+    background-size: 100% 100%;                 /*background-size: 1367px 420px;*/
+    padding: 160px;
+}
+
+.WebDevelopment{
+    background-image: url(images/ProgramAssignment/WebDevelopment/task1.png);
+    background-size: 100% 100%;
+    padding: 160px;
+}
+.DesignThinking {
+    background-image: url(images/ProgramAssignment/Innovation/design.PNG);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+}
+
+.spark_innovation {
+    background-image: url(images/ProgramAssignment/Innovation/design19.jfif);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+}
+.Entrepreneurship {
+    background-image: url(images/ProgramAssignment/Innovation/design20.png);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+}
+
+.soft_skills {
+    background-image: url(images/ProgramAssignment/SoftSkills/design3.jpeg);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+}
+
+
+.soft_skills2 {
+    background-image: url(images/ProgramAssignment/SoftSkills/design6.jpeg);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+}
+.soft_skills3{
+    background-image: url(images/ProgramAssignment/SoftSkills/t3.jpg);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+}
+.soft_skills4{
+    background-image: url(images/ProgramAssignment/SoftSkills/linkedin.png);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+}
+.soft_skills5{
+    background-image: url(images/ProgramAssignment/SoftSkills/cv.png);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+}
+
+.soft_skills6{
+    background-image: url(images/ProgramAssignment/SoftSkills/S11.jfif);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+} 
+.soft_skills7{
+    background-image: url(images/ProgramAssignment/SoftSkills/T11.webp);
+    background-size: cover;
+    padding: 160px;
+    position: relative;
+} 
+.CadAssigments                       /* to place header pic at the top of all asssignments pages */
+{
+    background-image:
+        url(images/ProgramAssignment/Computer-AidedDesign/one.jpeg);
+    background-size: 100% 100%;                 /*background-size: 1367px 420px;*/
+    padding: 160px;
+}
+
+.Additive-Subtractive-Manufacturing                     
+{
+    background-image:        url(images/ProgramAssignment/Additive-Subtractive-manufacturing/1.jpg);
+    background-size: 100% 100%;                 /*background-size: 1367px 420px;*/
+    padding: 160px;
+}
+
+
+.ArduinoProgramming                    
+{
+    background-image:
+        url(images/ProgramAssignment/ArduinoProgramming/1.jpg);
+    background-size: 100% 100%;                 /*background-size: 1367px 420px;*/
+    padding: 160px;
+}
+.ArduinoProgramming2                    
+{
+    background-image:
+        url(images/ProgramAssignment/ArduinoProgramming/5.png);
+    background-size: 100% 100%;                
+    padding: 100px;
+}
+.ArduinoProgramming3                    
+{
+    background-image:
+        url(images/ProgramAssignment/ArduinoProgramming/ass3.webp);
+    background-size: 100% 100%;                
+    padding: 100px;
+}
+
+.ArduinoProgramming4                   
+{
+    background-image:
+        url(images/ProgramAssignment/ArduinoProgramming/31.png);
+    background-size: 100% 100%;                
+    padding: 100px;
+}
+
+.ArduinoProgramming5                   
+{
+    background-image:
+        url(images/ProgramAssignment/ArduinoProgramming/95.webp);
+    background-size: 100% 100%;                
+    padding: 100px;
+}
+
+.ArduinoProgramming6                   
+{
+    background-image:
+        url(images/ProgramAssignment/ArduinoProgramming/dc.webp);
+    background-size: 100% 100%;                
+    padding: 100px;
+}
+
+
+.Elecronics1                  
+{
+    background-image:
+        url(images/ProgramAssignment/ElectronicsProduction/cover1.webp);
+    background-size: 100% 100%;                
+    padding: 100px;
+}
+.Elecronics2                  
+{
+    background-image:
+        url(images/ProgramAssignment/ElectronicsProduction/aa.png);
+    background-size: 100% 100%;                
+    padding: 100px;
+}
+
+.FinalProject {
+    background-image: url(images/ProgramAssignment/FinalProject/logo_final.png);
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+    position: relative;
+    height: 60vh; /* تقليل الارتفاع إلى 60% من ارتفاع الشاشة */
+    max-height: 500px; /* الحد الأقصى للارتفاع لضمان تناسب الصورة */
+ 
+}
+
+
+
+
+
+.CraftingVisualIdentity {
+    background-image: 
+        url(images/ProgramAssignment/VisualIdentity/cover.jpg);
+    background-size: cover;
+    padding: 100px;
+    position: relative;
+}
+
+.CraftingVisualIdentity::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* طبقة تغطية شفافة لجعل النص أوضح */
+    z-index: 1;
+}
+
+.CraftingVisualIdentity h1, 
+.CraftingVisualIdentity p {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* إضافة ظل للنص لجعله يبرز */
+}
+
+.DesignThinking::before {
+    content: "";
+    position: absolute;
+    top: 5;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 92%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.one, .two , .three {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+.image-container {
+    display: flex; /* Use flexbox to align items side by side */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 10px; /* Space between images */
+    padding: 10px; /* Optional padding */
+    max-width: 100%; /* Ensures the container doesn't exceed screen width */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ccc transparent; /* For Firefox */
+}
+
+.image-container::-webkit-scrollbar {
+    height: 8px; /* Height of scrollbar for WebKit browsers */
+}
+
+.image-container::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of scrollbar thumb */
+    border-radius: 4px; /* Rounded scrollbar thumb */
+}
+
+.image-container::-webkit-scrollbar-track {
+    background: transparent; /* Scrollbar track background */
+}
+
+.image {
+    width: 600px; /* Fixed width for images */
+    height: 500px; /* Fixed height to maintain aspect ratio */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    border: 5px solid #fff; /* Optional border */
+    padding-left: 50px;
+    margin-left: 10;
+    
+}
+
+
+
+
+
+.AssignmentHeader           
+{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+} 
+
+.one 
+{ 
+    text-align: center;
+    color:#000000; 
+    font-size:35px; 
+    font-family: Calibri;
+    font-weight: lighter;
+}
+
+.two 
+{ 
+    text-align: center;
+    color:#000000; 
+    font-size:56px; 
+    font-family: Calibri;
+    font-weight: bolder;
+}
+.three
+{ 
+    text-align: center;
+    color:#000000; 
+    font-size:50px; 
+    font-family: Calibri;
+    font-weight: bolder;
+}
+/* Assignment Documentation */
+.AssignmentDocumentation
+{ 
+    font-family:Calibri light;
+    font-size:20px; 
+    text-align:justify; 
+    margin-left:80px; 
+    margin-right:80px;
+    line-height:30px;              /*line and paragraph spacing*/
+}
+
+.AssignmentDocumentationImage
+{ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px; 
+    height: auto;
+    text-align: center;
+}
+
+.AssignmentDocumentationVideo
+{ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 560px; 
+    height: 315px;
+}
+
+/* Download */
+.download 
+{ 
+    color:black;
+    font-size:17.5px; 
+    margin-left:100px; 
+    margin-right:80px;
+}
+
+
+
+/*About Program*/
+
+/*program section*/
+.ProgramSection
+{    
+    margin: 50px;
+   font-family:Calibri light;  
+}
+.ProgamDesc
+{
+    margin: 50px;
+    font-size: 30px;
+    font-weight:bold;   
+}
+.Logos
+{
+    display: flex;
+    justify-content:center;
+    align-items:center;    
+}
+
+/*instructors section*/
+.ProgramIns
+{
+    margin: 20px;
+    font-family:Calibri light;
+    background-color: black;
+    color: aliceblue;
+    width: 40%;
+    font-size: 40px;
+}
+.grid-container
+{
+    margin: 50px;
+    font-family:Calibri light;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    column-gap:20px; /* Gap between grid columns */
+    grid-row-gap: 10px; /* Gap between grid rows */
+}
+
+.grid-container > div
+{
+    padding: 10px;
+    font-size: 30px;
+}
+
+.images
+{
+    border-radius: 50%;
+}
+
+.item1Diaaimage
+{
+    padding: 10px; /* Padding for spacing */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: pre-line; /* Prevent content from wrapping */ 
+    text-align: center;
+}
+
+.item2Karamimage
+{
+    padding: 10px; /* Padding for spacing */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: pre-line; /* Prevent content from wrapping */
+    text-align: center;
+}
+
+.item3DiaaName
+{
+    font-weight:bold; 
+    padding: 10px; /* Padding for spacing */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: pre-line; /* Prevent content from wrapping */
+    text-align: center;
+}
+
+.item4KaramName
+{
+    font-weight:bold;
+    padding: 10px; /* Padding for spacing */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: pre-line; /* Prevent content from wrapping */
+    text-align: center;
+}
+
+.item5DiaaAbout
+{
+    padding: 10px; /* Padding for spacing */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: pre-line; /* Prevent content from wrapping */
+    background-color: rgba(255, 121, 0,.65);
+    text-align: justify;
+    border-top-left-radius: 30px;
+}
+
+.item6KaramAbout
+{
+    padding: 10px; /* Padding for spacing */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: pre-line; /* Prevent content from wrapping */
+    background-color: rgba(255, 121, 0,.65);
+    text-align: justify;
+    border-top-right-radius: 30px;
+}
+
+.item7DiaaIcons
+{
+    border-bottom-left-radius: 30px;
+   background-color: rgba(255, 121, 0,.4);
+    text-align: center;
+}
+
+.item8KaramIcons
+{
+    border-bottom-right-radius: 30px;
+    background-color: rgba(255, 121, 0,.4);
+    text-align: center;
+}
+
+p{
+    padding: 20px;
+    margin: 10px;
+        font-family: 'Roboto', sans-serif; 
+
+}
+

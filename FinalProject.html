@@ -1,0 +1,627 @@
+<!doctype html>
+<!-- تعريف ملف HTML !-->
+<html>
+    <!-- Head !-->
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Assignments-FinalProject</title>
+        <link rel="stylesheet" href="NRCstyle.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <!--For socialmedia icons!-->
+    </head>
+
+    <!-- Body !-->
+
+    <body>
+        <div class="navbar">
+            <img src="images/Logo1.jpg" style="height: 80px" alt="App Inventor Logo" />
+            <a href="ProgramAssignments.html"> Program Assignments </a>
+            <a href="AboutProgram.html"> About Program </a>
+            <a href="index.html"> Home </a>
+        </div>
+
+        <!-- Assignment Header !-->
+
+        <div class="AssignmentHeader" id="home">
+            <div class="FinalProject">
+                <br />
+                <!--   <h1
+                    class="one"
+                    style="
+                        color: white;
+                        font-size: 5rem;
+                        font-weight: bold;
+                        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+                    ">
+                    Final Project
+                </h1>
+                <h1
+                    class="two"
+                    style="
+                        color: white;
+                        font-size: 5rem;
+                        font-weight: bold;
+                        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+                    ">
+                    LIFEBEAT
+                </h1> -->
+
+                <br />
+                <br />
+            </div>
+        </div>
+
+        <!-- Assignment Documentation !-->
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            The final project I am presenting is a Smart Stethoscope, a groundbreaking healthcare device designed to
+            measure vital signs such as blood oxygen levels, blood pressure, heart rate, and body temperature. This
+            innovative stethoscope aims to integrate multiple sensors and modern technologies to provide a compact,
+            user-friendly, and accurate tool for medical professionals and patients alike. By incorporating sensors like
+            the MAX30100 for heart rate and oxygen measurement, the MLX90615 for body temperature, and an OLED display,
+            this stethoscope will serve as a reliable, all-in-one solution for monitoring critical health data in
+            real-time.<br /><br />
+
+            In this documentation, I will delve into various aspects of the project, starting from the design phase of
+            the stethoscope and moving through the 3D printing process to create its parts. The design of the sensors,
+            their integration, and the process of programming them using Arduino will also be covered in detail. I will
+            explain how each sensor is carefully selected, assembled, and programmed to ensure optimal performance and
+            precision. Additionally, I will walk through the process of designing and printing the necessary components
+            using 3D printing technology, which allows for custom, ergonomic designs tailored to the stethoscope's
+            intended use.<br /><br />
+
+            Beyond the technical aspects, I will also cover the creative side of the project, including the design of
+            the logo and branding, to ensure the device has a professional and cohesive identity. This documentation
+            will offer insights into the entire journey of developing the Smart Stethoscope—from conception and design
+            to the final product—highlighting both the technical expertise and creative effort involved in bringing this
+            innovative medical tool to life.
+        </p>
+
+        <!-- Animated Arrow Divider Section -->
+        <div class="arrow-divider">
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: flex-start">
+            <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px; text-align: left">
+                <strong
+                    ><big
+                        >The idea for this project stemmed from a common problem faced by medical professionals.</big
+                    ></strong
+                >
+                As a doctor, the stethoscope is one of the most important and widely used tools. It’s a device doctors
+                carry with them throughout their day, whether in the clinic or hospital. However, while the stethoscope
+                is essential for listening to a heartbeat, it only measures one aspect of a patient’s health – heart
+                rate. This limitation got me thinking: why should a doctor need multiple devices to measure other vital
+                signs such as blood pressure, temperature, and oxygen levels? Why not combine all of these functions
+                into one convenient tool that can display real-time data on a small screen, making it easier for doctors
+                to quickly and accurately assess the health of their patients?<br /><br />
+
+                The initial concept for this project was inspired by artificial intelligence, which led us to envision a
+                smart stethoscope. With the help of AI, we began to realize the possibility of integrating multiple
+                vital-sign monitoring features into a single device. This sparked a series of ideas and innovations that
+                we started to explore. The smart stethoscope we conceived would not only listen to heartbeats, but also
+                measure blood pressure, oxygen saturation, and body temperature, all in one device. By merging these
+                features into one tool, doctors can save time and effort while providing more comprehensive care to
+                their patients. This project was born from a simple desire to address a common issue and create a more
+                efficient and effective tool for healthcare professionals.
+            </p>
+
+            <img
+                src="images/ProgramAssignment/FinalProject/1.jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto; margin-right: 50px; border-radius: 15%" />
+        </div>
+
+        <!-- CSS Animation -->
+        <style>
+            .arrow-divider {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+                position: relative;
+            }
+
+            .arrow {
+                font-size: 60px;
+                color: black;
+                animation: move 5s linear infinite;
+                margin: 0 10px;
+                opacity: 0;
+            }
+
+            .arrow:nth-child(1) {
+                animation-delay: 0s;
+            }
+
+            .arrow:nth-child(2) {
+                animation-delay: 1s;
+            }
+
+            .arrow:nth-child(3) {
+                animation-delay: 2s;
+            }
+
+            .arrow:nth-child(4) {
+                animation-delay: 3s;
+            }
+
+            .arrow:nth-child(5) {
+                animation-delay: 4s;
+            }
+
+            @keyframes move {
+                0% {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+                50% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        </style>
+        <div class="arrow-divider">
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+            <span class="arrow">&#8594;</span>
+        </div>
+        <img
+            src="images/ProgramAssignment/FinalProject/2.png"
+            alt="MC_89"
+            style="margin-left: 20px; margin-right: 20px; width: 95%"
+            height="100% " />
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            Here, we began to broaden the scope of our research, diving deeper into identifying the specific sensors
+            required to implement this device, one component at a time. Our focus was on exploring each sensor's
+            compatibility, functionality, and suitability for our smart stethoscope. We investigated various sensor
+            types to measure vital signs accurately, including those for monitoring heart rate, blood pressure, oxygen
+            saturation, and body temperature. This process involved understanding each sensor’s specifications, how they
+            could be interconnected, and the technical requirements needed to ensure seamless integration. In the
+            following sections, I will explain the choices we made, the research insights we gained, and the technical
+            challenges we addressed to bring this idea to life.
+        </p>
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/3.png"
+                alt="Image 1"
+                class="image"
+                style="width: 45%; height: 50%" />
+            <img
+                src="images/ProgramAssignment/FinalProject/4.png"
+                alt="Image 1"
+                class="image"
+                style="width: 45%; height: 50%" />
+        </div>
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            We began the project by researching and investigating the sensors and data sheets required to bring the
+            smart stethoscope concept to life. This initial stage focused on understanding each component's
+            specifications, identifying compatible sensors, and exploring ways to integrate them effectively. We sought
+            information on each part to ensure it met our functional and technical needs, paying special attention to
+            details that would support accurate data collection. Additionally, we researched vendors within Jordan, such
+            as Wasleh, to source the necessary parts and reviewed the pricing options for each sensor. This
+            comprehensive approach allowed us to develop a clear plan for assembling a simplified prototype and to
+            gather the essential tools and materials, ensuring we were well-prepared to start building an initial model
+            of the device.
+        </p>
+
+        <img
+            src="images/ProgramAssignment/FinalProject/excel.png"
+            alt="Image 1"
+            class="image"
+            style="margin-left: 20px; margin-right: 20px; width: 85%"
+            height="120% " />
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            Research and planning began to select all the components needed for the project, where it was determined
+            that the Arduino Nano was the most suitable in terms of small size and efficiency in performing the required
+            tasks. In addition, a breadboard was chosen to facilitate the temporary installation of wires and components
+            before moving on to the final connections, allowing for safe and flexible testing of the system. The
+            appropriate wires were also identified for the various connections, so that they fit the components and
+            ensure the stability of signals between devices. <br /><br />
+
+            Regarding the sensors, the MAX30100 sensor was chosen to measure heart rate and blood oxygen levels, in
+            addition to the MLX90614 sensor to accurately measure temperature. Other sensors that may be necessary for
+            the project were also identified. After collecting all the available information and options, they were
+            organized in an Excel file that includes accurate details for each component, such as the required quantity,
+            prices, part number, and technical specifications for each item. <br /><br />
+
+            After that, a purchase order was placed for all the required components from the Microelectronics website,
+            which provides a wide range of high-quality electronic components. The expected arrival timeline was
+            determined, to ensure that all parts are available on time, which ensures smooth and efficient work
+            continuity.
+        </p>
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/delever%20(1).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 25%; height: auto" />
+            <img
+                src="images/ProgramAssignment/FinalProject/delever%20(2).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 25%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/delever%20(3).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 25%; height: auto" />
+            <img
+                src="images/ProgramAssignment/FinalProject/delever%20(4).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 25%; height: auto" />
+        </div>
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            After placing an order for the necessary parts from Microelectronics, the required components were received
+            on time. Once the parts arrived, we started opening the packages and organizing the components according to
+            the pre-planned layout. All the parts were checked for integrity and number, and we made sure that each
+            component matched the specifications listed in the Excel file. With the basic components such as the Arduino
+            Nano, the Breadboard, the wires, and the various sensors in place, we started the initial assembly phase,
+            where the parts were assembled on the Breadboard and prepared for initial testing. Work is now underway to
+            conduct the necessary tests and connections to ensure that all the components are working efficiently before
+            moving on to the next steps in the project.
+        </p>
+
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/measurement%20(1).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 25%; height: auto" />
+
+            <video controls style="width: 50%; height: 500px; object-fit: cover; border-radius: 8px">
+                <source src="images/ProgramAssignment/FinalProject/measurement.mp4" type="video/mp4" />
+            </video>
+
+            <img
+                src="images/ProgramAssignment/FinalProject/measurement%20(2).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 25%; height: auto" />
+        </div>
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            After receiving the components, accurate measurements were taken for each piece required for the project,
+            such as the measurements of the sensors, electronics, and wires, in addition to the measurements of the
+            Arduino Nano. Precision measuring tools were used to ensure that all dimensions matched the initial design.
+            These measurements are an essential step in the design phase, as the necessary data was collected to
+            determine how to effectively distribute the components on the mailboard, as well as to determine the
+            appropriate distances and paths for wires and connections between the pieces. Through this process, all
+            components were prepared in an organized manner to ensure that the final design would be practical and
+            consistent with the actual dimensions of the components, facilitating the implementation and connections
+            phase later on.
+        </p>
+
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/des1.png"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/des2.png"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/des3.png"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+        </div>
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            After identifying and connecting the required components, we began by taking precise measurements for each
+            part based on their real-world dimensions. These measurements served as the foundation for designing each
+            part in Fusion 360. Working in Fusion 360 requires great accuracy when defining measurements, as the program
+            provides tools like "Dimensions" to set distances and angles precisely, as well as "Scale" to ensure the
+            dimensions match real-world proportions. Taking accurate measurements involves using tools such as rulers or
+            micrometers and considering slight tolerances that might occur when translating real-world measurements into
+            3D models. Fusion 360 also offers "Inspect" tools to verify these measurements during the design process to
+            ensure alignment and consistency. Once the design is complete, we convert it into a printable format, ready
+            for 3D printing. At this stage, it’s essential to check that all parts will fit together correctly, ensuring
+            the pieces will connect and align properly after printing. This step guarantees that the design is not only
+            accurate but also functional in the physical assembly.
+        </p>
+
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/3d1.png"
+                alt="Image 1"
+                class="image"
+                style="width: 25%; height: auto" />
+
+            <video controls style="width: 50%; height: 500px; object-fit: cover; border-radius: 8px">
+                <source src="images/ProgramAssignment/FinalProject/design%20(2).mp4" type="video/mp4" />
+            </video>
+
+            <img
+                src="images/ProgramAssignment/FinalProject/design%20(2).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 25%; height: auto" />
+
+            <video controls style="width: 50%; height: 500px; object-fit: cover; border-radius: 8px">
+                <source src="images/ProgramAssignment/FinalProject/design%20(3).mp4" type="video/mp4" />
+            </video>
+        </div>
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            Initial designs for the speakers were first developed, as they were not yet approved, and were intended to
+            study how the parts would be arranged inside the speaker. Although these initial designs were an important
+            step in understanding how the components would fit together, they were not the final design. These designs
+            were later discarded because they would have taken up too much space during the printing process, and they
+            were too large, which would have affected the efficiency of the printing. The parts were also not well
+            arranged in the design, as they were all spread out in a large width, which made the assembly and
+            coordination not ideal. After evaluating these designs, we moved towards another design that was more
+            accurate and suitable for the project. I will now explain this final design that was approved, which is
+            based on better organization of the components to ensure optimal performance when actually printing and
+            assembling.
+        </p>
+
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/q%20(1).png"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+            <img
+                src="images/ProgramAssignment/FinalProject/q%20(6).png"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/q%20(2).png"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/q%20(3).png"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/q%20(4).png"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+        </div>
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            The final design of the stethoscope has now been adopted vertically, with all components arranged within
+            this model in a thoughtful and effective manner. The design is based on the principle of integrating the
+            parts in a manner similar to a real stethoscope, ensuring that the stethoscope is of an appropriate size and
+            easy to use. Through the vertical arrangement, it was ensured that all components, such as sensors, screen
+            and charging, are integrated within the body in a way that ensures maintaining the small size of the
+            stethoscope, making it easy for the doctor to carry and use while examining patients. The final design was
+            also implemented using 3D modeling technology in Fusion 360, which allows us to accurately determine the
+            dimensions and ensure that all the parts will fit perfectly together when assembled. After completing the 3D
+            design, we will begin the printing process using the 3D printer, where the parts will be printed according
+            to these precise measurements. Through this process, we expect to obtain highly accurate printed parts that
+            can be easily assembled, ensuring that the stethoscope will be ready for practical use, while maintaining
+            its small size and effectiveness in medical examination.
+        </p>
+
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/under%20(1).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+            <img
+                src="images/ProgramAssignment/FinalProject/under%20(2).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/under%20(3).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/under%20(4).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <video controls style="width: 40%; height: auto; object-fit: cover; border-radius: 8px">
+                <source src="images/ProgramAssignment/FinalProject/under%20(1).mp4" type="video/mp4" />
+            </video>
+
+            <video controls style="width: 40%; height: auto; object-fit: cover; border-radius: 8px">
+                <source src="images/ProgramAssignment/FinalProject/under%20(3).mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            The under layer was printed using an Ender 6 printer, where the design was prepared in advance in Fusion
+            360. This layer is the foundation for building the 3D model, and is carefully printed to ensure stability
+            and consistency for the rest of the layers. Before printing, the printer settings, such as nozzle
+            temperature and print speed, were carefully adjusted to ensure that the first layer adheres well to the
+            printing surface. As shown in the image, the first layer is formed with an even and consistent distribution
+            of materials, allowing the final project to achieve the highest level of quality and solidity. This step is
+            vital, as any error in the under layer could affect the stability and shape of the final model, which makes
+            the printer setup and print monitoring essential to ensure the success of the project.
+        </p>
+
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/measurement%20(1).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+            <img
+                src="images/ProgramAssignment/FinalProject/middel%20(2).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/middel%20(3).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/middel%20(4).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+        </div>
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            After completing the printing of the Under Layer, the middle layer was printed using the Ender 2 printer.
+            This layer is a complementary step as it builds on top of the bottom layer to enhance the structure and add
+            basic details to the model. This layer was designed on the Fusion 360 program, where the thickness of the
+            layers and their infill pattern were determined to suit the project requirements. During printing, good
+            cohesion between the middle layer and the bottom layer was ensured to ensure rigidity and cohesion between
+            the parts. As shown in the image, the middle layer shows more details and contributes to forming the overall
+            structure of the model, taking into account the consistent distribution of materials. This layer is
+            considered a pivotal part as it contributes to supporting the upper layers that will be added later, making
+            it a basic point of contact between the base and the final details.
+        </p>
+
+        <div class="image-container">
+            <img
+                src="images/ProgramAssignment/FinalProject/l%20(1).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+            <img
+                src="images/ProgramAssignment/FinalProject/l%20(2).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/l%20(3).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/l%20(4).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+        </div>
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            The MAX30102 and MLX96014 sensors were soldered and prepared in the lab, where I carefully connected the
+            components to ensure that they would work in harmony. We started by soldering the wires for each sensor,
+            making sure that the wires were connected in the correct directions on the board. The MAX30102 sensor is
+            used to measure heart rate and blood oxygen levels, while the MLX96014 sensor measures temperature. The
+            soldering process was done using the precision tools available in the lab, taking care to ensure that there
+            was no electrical short between the wires. Below are some clips that illustrate the soldering process step
+            by step, with a comprehensive explanation of each stage to ensure correct and effective connections for the
+            sensors.
+        </p>
+
+        <div class="image-container">
+            <video controls style="width: 40%; height: auto; object-fit: cover; border-radius: 8px">
+                <source src="images/ProgramAssignment/FinalProject/prog%20(1).mp4" type="video/mp4" />
+            </video>
+            <img
+                src="images/ProgramAssignment/FinalProject/prog%20(1).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/prog%20(2).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/prog%20(3).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: auto" />
+        </div>
+
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            The project's sensors were programmed, and I prepared libraries for each sensor separately to ensure that
+            they interact properly with other components. MAX30102 Library: This library is dedicated to controlling the
+            MAX30102 sensor, which is used to measure heart rate and blood oxygen levels. The library reads data from
+            the sensor and converts it into values that can be processed using the Arduino. This library was used to
+            initialize the sensor and set the necessary parameters to obtain an accurate reading of heart rate and
+            oxygen levels. MLX96014 Library: This library is responsible for dealing with the MLX96014 sensor, which
+            measures temperature with high accuracy. The sensor was programmed to read data periodically and display the
+            measured temperature on an OLED screen. The library provides easy interaction with the sensor and helps in
+            reading sensory data and converting it into an understandable value. Each library was carefully configured,
+            and the codes for each sensor were included in the main program to deal with each sensor individually
+            smoothly and efficiently.
+        </p>
+
+        <div class="image-container">
+            <video controls style="width: 40%; height: 500px; object-fit: cover; border-radius: 8px">
+                <source src="images/ProgramAssignment/FinalProject/FD%20(1).mp4" type="video/mp4" />
+            </video>
+            <img
+                src="images/ProgramAssignment/FinalProject/FD%20(1).jpeg"
+                alt="Image 1"
+                class="image"
+                style="width: 40%; height: 500px" />
+
+            <img
+                src="images/ProgramAssignment/FinalProject/FD%20(2).jpeg"
+                alt="Image 2"
+                class="image"
+                style="width: 40%; height: 500px" />
+        </div>
+        <p style="font-size: 18px; font-weight: 400; padding: 15px; margin-left: 10px">
+            In addition to the programming and sensor integration, all the parts of the stethoscope were designed and
+            printed using Fusion 360. The components were carefully designed to ensure they fit together seamlessly for
+            the final assembly. Once the 3D printing process was complete, the individual parts were initially
+            installed, allowing for a preliminary assembly to check the fit and functionality of each component. This
+            step ensured that everything was properly aligned before finalizing the design and proceeding with further
+            testing.
+        </p>
+     
+    </body>
+</html>
